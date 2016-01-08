@@ -6,7 +6,7 @@
     "build:js": "browserify src/js/main.js -t babelify -d -o public/bundle.js --extension .jsx",
     "build:sass": "node-sass src/sass/bundle.scss -o public/",
     "build": "npm run build:js && npm run build:sass",
-    "watch": "parallelshell 'npm run build:js -- --watch' 'watch \" npm run build:sass\" src/sass'",
+    "watch": "parallelshell 'watch \"npm run build:js\" src/js' 'watch \" npm run build:sass\" src/sass'",
     "livereload": "parallelshell 'livereload public' 'npm run watch'",
     "start": "node main.js"
   },
@@ -33,9 +33,6 @@
     "livereload": "^0.4.0",
     "node-sass": "^3.4.2",
     "parallelshell": "^2.0.0",
-    "react": "^0.14.3",
-    "react-dom": "^0.14.3",
-    "react-router": "^1.0.0",
     "watch": "^0.16.0"
   }
 }
