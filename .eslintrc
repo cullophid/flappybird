@@ -46,7 +46,9 @@
     block-scoped-var: 1      # - treat var statements as if they were block scoped
     complexity: 1            # - specify the maximum cyclomatic complexity allowed in a program
     consistent-return: 1     # - require return statements to either always or never specify values
-    curly: 1                 # - specify curly brace conventions for all control statements
+    curly:                   # - specify curly brace conventions for all control statements
+      - 1
+      - multi-line
     default-case: 1          # - require default case in switch statements
     dot-notation: 1          # - encourages use of dot notation whenever possible
     dot-location:            # - enforces consistent newlines before or after dots

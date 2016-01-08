@@ -1,11 +1,8 @@
 import {map} from './util'
-import {clear, drawRect} from './canvas'
-
-const drawPipe = drawRect
-const drawBird = drawRect
+import {clear, drawBox} from './dsl/canvas'
 
 export default model => {
   clear()
-  map(drawPipe, model.pipes)
-  drawBird(model.bird)
+  map(drawBox, model.pipes)
+  drawBox(model.bird)
 }
