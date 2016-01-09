@@ -1,10 +1,10 @@
 import {merge, map, filter, compose} from './util'
 import {GRAVITY, SPEED, PIPE_MIN_SPACE, PIPE_PROBABILITY} from './config'
-import {fall, moveX} from './dsl/physics'
+import {fall, offsetX} from './dsl/physics'
 import {pipeFactory} from './factories'
 
 // [Pipe] -> [Pipe]
-const movePipes = pipes => map(moveX(-SPEED), pipes)
+const movePipes = pipes => map(offsetX(-SPEED), pipes)
 
 // Element -> Element
 const freeFall = fall(GRAVITY)

@@ -4,6 +4,7 @@ import render from './render'
 import simulate from './simulate'
 import {birdFactory} from './factories'
 import gameOver from './gameOver'
+import {FLAP_POWER} from './config'
 // Model -> Boolean
 
 let model = {
@@ -12,7 +13,7 @@ let model = {
 }
 
 const flap = () =>
-  model = merge(model, {bird: merge(model.bird, {accl: -6})})
+  model = merge(model, {bird: merge(model.bird, {accl: FLAP_POWER})})
 
 document.addEventListener('click', flap)
 document.addEventListener('keypress', flap)
